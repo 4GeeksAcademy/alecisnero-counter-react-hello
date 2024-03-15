@@ -12,12 +12,14 @@ const HoraWeb = () => {
           //aqui modifico el setHora 
           setHora(new Date().toLocaleTimeString())
         }, 1000)
-        return clearInterval(intervalo)
+       //aqui falta el return para limpiar la funcion, pero si limpio la funcion se quedara estatico, falta saber como puedo hacer a window cuando se cierra la pestana para colocar un else y asinarle el return
 
     },[])
 
   return (
-    <div>Su hora actual es: {hora}</div>
+    <div>
+      <p style={{margin: '1vh'}}>Su hora actual es: {hora}</p>
+    </div>
   )
 }
 

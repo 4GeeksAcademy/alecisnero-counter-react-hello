@@ -49,16 +49,16 @@ const SecondsCounter = () => {
 
 
     return (
-        <div className='row d-flex justify-content-center mt-5 text-center'>
-            <div className='card w-75'>
+        <div className='d-flex justify-content-center mt-5 me-xxl-5'>
+            <div className='card w-100 text-center'>
                 <div className='card-header'>
                     <h3>Cronometro</h3>
                 </div>
                 <div className='card-body bg-dark'>
-                    <h3 className='display-1' id='hours' style={{color: 'white'}}><CiClock2 /> {(hours < 10) ? `0${hours}` : hours}:{(min < 10) ? `0${min}` : min}:{(seg < 10) ? `0${seg}` : seg}</h3>
+                    <h3 className='display-1' style={{color: 'white'}}><CiClock2 />{(hours < 10) ? `0${hours}` : hours}:{(min < 10) ? `0${min}` : min}:{(seg < 10) ? `0${seg}` : seg}</h3>
                 </div>
                 <div className='card-footer d-flex justify-content-around'>
-                    <button className='Iniciar btn btn-success' onClick={activarYDesactivar}>{activado ? 'Pausar' : 'Iniciar'}</button>
+                    <button className={`btn ${activado ? 'btn-danger' : 'btn-outline-success'}`} onClick={activarYDesactivar}>{activado ? 'Pausar' : 'Iniciar'}</button>
                     <button className='btn btn-success' onClick={reiniciar}>Reiniciar</button>
                 </div>
             </div>
